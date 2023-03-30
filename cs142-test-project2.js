@@ -1,5 +1,4 @@
 'use strict';
-
 /*
  * This file tests the CS142 Project #2 JavaScript assignment problems. It prints what
  * it finds to the console log and updates the text being displayed in the window with a
@@ -13,8 +12,9 @@ var p1Message = 'SUCCESS';
 var p2Message = 'SUCCESS';
 var p3Message = 'SUCCESS';
 
+
 // Keep track of all the var statements
-var varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
+ var varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
 
 // Utility functions
 function arraysAreTheSame(a1, a2) {
@@ -28,9 +28,9 @@ function arraysAreTheSame(a1, a2) {
   }
   return true;
 }
+(function() {
 
 // ********************* Test cs142MakeMultiFilter
-
 if (typeof cs142MakeMultiFilter !== 'function') {
   console.error('cs142MakeMultiFilter is not a function', typeof cs142MakeMultiFilter);
   p1Message = 'FAILURE';
@@ -138,14 +138,15 @@ varDeclared.forEach(function (sym) {
   }
 });
 console.log('Test Problem 3:', p3Message);
+});
 
 // Store the result back into the global space under the object name cs142Project2Results
 window.cs142Project2Results = {
   p1Message: p1Message,
   p2Message: p2Message,
   p3Message: p3Message,
-};
 
+};
 // Once the browser loads our companion HTML in cs142-test-project2.html we
 // update it with the results of our testing. This code will make more
 // sense after the next project.
