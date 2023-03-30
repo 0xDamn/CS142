@@ -118,6 +118,7 @@ if (typeof Cs142TemplateProcessor !== 'function') {
   var str = dateTemplate.fillIn(dictionary);
 
   if (str !== 'My favorite month is July but not the day 1 or the year 2016') {
+    console.log(str);
     console.error('Cs142TemplateProcessor didn\'t work');
     p2Message = 'FAILURE';
   }
